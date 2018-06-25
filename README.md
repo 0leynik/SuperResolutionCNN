@@ -2,7 +2,7 @@
 
 The original paper is [Learning a Deep Convolutional Network for Image Super-Resolution](https://arxiv.org/abs/1501.00092)
 
-## Result
+## Result on 81000 iteration
 - input train data: 1044750 x 1 x 32 x 32 imgs
 - output train data: 1044750 x 1 x 20 x 20 imgs
 - epoches: 10
@@ -11,7 +11,6 @@ The original paper is [Learning a Deep Convolutional Network for Image Super-Res
 - loss: MSE
 
 <table style="width:100%" align="center">
-  <caption>Result on 81000 iteration</caption>
   <tr>
     <th>Original</th>
     <td><img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/1.jpg" height="250"/>
