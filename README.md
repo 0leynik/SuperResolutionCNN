@@ -9,7 +9,7 @@ The original paper is [Learning a Deep Convolutional Network for Image Super-Res
 - epoches: 10
 - batch_size: 128
 - optimizer: Adam, lr=0.0003
-- loss: mean squared error
+- loss: MSE
 
 <table style="width:100%" align="center">
   <tr>
