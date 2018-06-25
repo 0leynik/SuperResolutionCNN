@@ -6,6 +6,31 @@ from keras.optimizers import Adam
 import numpy as np
 import os
 import cv2
+import sys
+import glob
+
+
+# saved_weights_path = 'weights_loss_HR/iter_1000.h5'
+saved_weights_path = 'weights_loss_HR/iter_81000.h5'
+
+
+def main():
+    # increase_2x('examples/1.jpg')
+    # increase_2x('examples/1.jpg')
+    # increase_2x('examples/Q_H_D_18062405_2960.jpg')
+    # predict_2x('examples/1.jpg')
+    # predict_2x('examples/3.png')
+    # predict_2x('examples/butterfly.png')
+    # predict_2x('examples/0140.png')
+    # predict_2x('examples/0826.png')
+
+    imgs_dir = get_input_dir_from_argv()
+    if sys.argv[1] == '-i':
+        increase_dir_2x(imgs_dir)
+    elif sys.argv[1] == '-p':
+        predict_dir_2x(imgs_dir)
+
+    print('\nCompleted!')
 
 
 def predict_model():
@@ -25,6 +50,19 @@ def predict_model():
 
 def predict_2x(img_path):
     '''
+    Used to evaluate image quality,
+    obtained by bicubic interpolation
+    and when using convolutional neural network.
+
+    The original image is compressed 2 times in width and height,
+    then it is restored to its original size using cubic interpolation
+    and fed into the neural network input.
+
+    Then the quality between the images and the original is evaluated.
+    PSNR is used as a comparison metric.
+    https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio
+
+
     Используется для оценки качества изображений,
     полученных при помощи бикубической интерполяции
     и при использовании сверточной нейронной сети.
@@ -36,6 +74,7 @@ def predict_2x(img_path):
     Далее оценивается качество между полученными ихображениями и оригиналом.
     В качестве метрики сравнения используется PSNR.
     https://ru.wikipedia.org/wiki/Пиковое_отношение_сигнала_к_шуму
+
     :param img_path:
     :return:
     '''
@@ -104,12 +143,15 @@ def predict_2x(img_path):
 
 def increase_2x(img_path):
     '''
+    Increase the original image 2 times the width and height.
+
     Увеличение исходного изображения в 2 раза по ширине и высоте.
+
     :param img_path:
     :return:
     '''
     if not os.path.isfile(img_path):
-        print('Укажите путь до изображения! Ошибка: ' + img_path)
+        print('Specify the path to the image! Error: ' + img_path)
 
     srcnn_model = predict_model()
     srcnn_model.load_weights(saved_weights_path)
@@ -146,15 +188,28 @@ def increase_2x(img_path):
     cv2.imwrite(srcnn_img_path, BGR_pred_img)
 
 
-# saved_weights_path = 'weights_loss_HR/iter_1000.h5'
-saved_weights_path = 'weights_loss_HR/iter_81000.h5'
+def get_input_dir_from_argv():
+    print(sys.argv)
+    if len(sys.argv) < 3:
+        sys.exit('Specify arguments:\n1. -i to increase_2x or -p to predict_2x\n2. directory with images')
+    else:
+        input_dir = sys.argv[2]
+        if not os.path.isdir(input_dir):
+            sys.exit('Error! Directory \"' + input_dir + '\" not found!')
+    print('\nImage directory: ' + input_dir + '\n')
+    return input_dir
+
+
+def increase_dir_2x(imgs_dir):
+    for img_path in glob.glob(os.path.join(imgs_dir, '*.*')):
+        print('Prepare \"' + img_path + '\"...')
+        increase_2x(img_path)
+
+def predict_dir_2x(imgs_dir):
+    for img_path in glob.glob(os.path.join(imgs_dir, '*.*')):
+        print('Prepare \"' + img_path + '\"...')
+        predict_2x(img_path)
+
 
 if __name__ == "__main__":
-    # increase_2x('examples/1.jpg')
-    # increase_2x('examples/1.jpg')
-
-    predict_2x('examples/1.jpg')
-    predict_2x('examples/3.png')
-    predict_2x('examples/butterfly.png')
-    predict_2x('examples/0140.png')
-    predict_2x('examples/0826.png')
+    main()
