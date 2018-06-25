@@ -18,7 +18,7 @@ The original paper is [Learning a Deep Convolutional Network for Image Super-Res
   <tr>
     <th>Downresized</th>
     <td><img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/1_downresized.jpg" height="250"/></td>
-    <td><img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/butterfly_downresized.png" height="400"/></td>
+    <td><img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/butterfly_downresized.png" height="250"/></td>
   </tr>
   <tr>
     <th>Bicubic</th>
