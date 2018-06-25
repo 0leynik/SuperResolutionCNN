@@ -13,7 +13,7 @@ The original paper is [Learning a Deep Convolutional Network for Image Super-Res
   <tr>
     <th>Original</th>
     <td><img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/1.jpg" width="400"/></td>
-    <td><img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/butterfly.png" width="400"/></td>
+    <td><img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/butterfly.png" width="200"/></td>
   </tr>
   <tr>
     <th>Downresized</th>
