@@ -9,9 +9,20 @@ The original paper is [Learning a Deep Convolutional Network for Image Super-Res
 - batch_size 128
 
 <p align="center">
-<img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/1.jpg" width="800"/>
-<img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/1_downresized.jpg" width="800"/>
-<img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/1_bicubic.jpg" width="800"/>
-<img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/1_srcnn.jpg" width="800"/>
+
+<table style="width:100%">
+<tr>
+  <th>Original</th>
+  <th>Downresized</th> 
+  <th>Bicubic</th>
+  <th>SRCNN</th>
+</tr>
+<tr>
+  <td><img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/1.jpg"/></td>
+  <td><img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/1_downresized.jpg"/></td> 
+  <td><img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/1_bicubic.jpg"/></td>
+  <td><img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/1_srcnn.jpg"/></td>
+</tr>
+</table>
 </p>
 
