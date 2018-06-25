@@ -8,6 +8,8 @@ The original paper is [Learning a Deep Convolutional Network for Image Super-Res
 - output train data: 1044750 x 1 x 20 x 20 imgs
 - epoches: 10
 - batch_size: 128
+- optimizer: Adam, lr=0.0003
+- loss: mean squared error
 
 <table style="width:100%" align="center">
   <tr>
