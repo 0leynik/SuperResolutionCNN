@@ -20,7 +20,7 @@ The original paper is [Learning a Deep Convolutional Network for Image Super-Res
     </td>
   </tr>
   <tr>
-    <th>Downresized</th>
+    <th>Downresized<br>factor 2x</th>
     <td><img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/1_downresized.jpg" height="250"/>
     <div align="center">257 × 171</div>
     </td>
