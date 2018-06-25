@@ -34,22 +34,22 @@ The original paper is [Learning a Deep Convolutional Network for Image Super-Res
     <th>Bicubic</th>
     <td><img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/1_bicubic.jpg" height="250"/>
     <div align="center">514 × 343</div>
-    <div align="center">34.3649746282</div>
+    <div align="center">PSNR = 34.3649746282</div>
     </td>
     <td><img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/butterfly_bicubic.png" height="250"/>
     <div align="center">256 × 256</div>
-    <div align="center">24.7592134442</div>
+    <div align="center">PSNR = 24.7592134442</div>
     </td>
   </tr>
   <tr>
     <th>SRCNN</th>
     <td><img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/1_srcnn.jpg" height="250"/>
     <div align="center">514 × 343</div>
-    <div align="center">37.118093183</div>
+    <div align="center">PSNR = 37.118093183</div>
     </td>
     <td><img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/butterfly_srcnn.png" height="250"/>
     <div align="center">256 × 256</div>
-    <div align="center">30.4544242145</div>
+    <div align="center">PSNR = 30.4544242145</div>
     </td>
   </tr>
 </table>
