@@ -3,6 +3,7 @@
 The original paper is [Learning a Deep Convolutional Network for Image Super-Resolution](https://arxiv.org/abs/1501.00092)
 
 ## Result on 81000 iteration
+### training settings
 - input train data: 1044750 x 1 x 32 x 32 imgs
 - output train data: 1044750 x 1 x 20 x 20 imgs
 - epoches: 10
