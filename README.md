@@ -12,22 +12,38 @@ The original paper is [Learning a Deep Convolutional Network for Image Super-Res
 <table style="width:100%" align="center">
   <tr>
     <th>Original</th>
-    <td><img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/1.jpg" height="250"/></td>
-    <td><img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/butterfly.png" height="250"/></td>
+    <td><img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/1.jpg" height="250"/>
+    <div align="center">514 × 343</div>
+    </td>
+    <td><img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/butterfly.png" height="250"/>
+    <div align="center">256 × 256</div>
+    </td>
   </tr>
   <tr>
     <th>Downresized</th>
-    <td><img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/1_downresized.jpg" height="250"/></td>
-    <td><img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/butterfly_downresized.png" height="250"/></td>
+    <td><img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/1_downresized.jpg" height="250"/>
+    <div align="center">257 × 171</div>
+    </td>
+    <td><img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/butterfly_downresized.png" height="250"/>
+    <div align="center">128 × 128</div>
+    </td>
   </tr>
   <tr>
     <th>Bicubic</th>
-    <td><img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/1_bicubic.jpg" height="250"/></td>
-    <td><img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/butterfly_bicubic.png" height="250"/></td>
+    <td><img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/1_bicubic.jpg" height="250"/>
+    <div align="center">514 × 343</div>
+    </td>
+    <td><img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/butterfly_bicubic.png" height="250"/>
+    <div align="center">256 × 256</div>
+    </td>
   </tr>
   <tr>
     <th>SRCNN</th>
-    <td><img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/1_srcnn.jpg" height="250"/></td>
-    <td><img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/butterfly_srcnn.png" height="250"/></td>
+    <td><img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/1_srcnn.jpg" height="250"/>
+    <div align="center">514 × 343</div>
+    </td>
+    <td><img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/butterfly_srcnn.png" height="250"/>
+    <div align="center">256 × 256</div>
+    </td>
   </tr>
 </table>
