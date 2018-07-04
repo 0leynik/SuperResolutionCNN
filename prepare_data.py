@@ -3,7 +3,7 @@
 import os
 import cv2
 import h5py
-import numpy
+import numpy as np
 
 count_rand_crop = 30
 data_size = 32
@@ -22,8 +22,8 @@ def prepare_crop_data(path):
     names = sorted(names)
     nums = len(names)
 
-    data = numpy.zeros((nums * count_rand_crop, 1, data_size, data_size), dtype=numpy.float)
-    label = numpy.zeros((nums * count_rand_crop, 1, label_size, label_size), dtype=numpy.float)
+    data = np.zeros((nums * count_rand_crop, 1, data_size, data_size), dtype=np.float)
+    label = np.zeros((nums * count_rand_crop, 1, label_size, label_size), dtype=np.float)
 
     for i in range(nums):
         name = path + names[i]
@@ -38,8 +38,8 @@ def prepare_crop_data(path):
         lr_img = cv2.resize(lr_img, (shape[1], shape[0]))
 
         # генерация случайних координат для выборки из изображения
-        points_x = numpy.random.randint(0, min(shape[0], shape[1]) - data_size, count_rand_crop)
-        points_y = numpy.random.randint(0, min(shape[0], shape[1]) - data_size, count_rand_crop)
+        points_x = np.random.randint(0, min(shape[0], shape[1]) - data_size, count_rand_crop)
+        points_y = np.random.randint(0, min(shape[0], shape[1]) - data_size, count_rand_crop)
 
         for j in range(count_rand_crop):
             lr_patch = lr_img[points_x[j]: points_x[j] + data_size, points_y[j]: points_y[j] + data_size]
@@ -95,8 +95,8 @@ def prepare_all_data(path):
                 lr_patch = lr_patch.astype(float) / 255.
                 hr_patch = hr_patch.astype(float) / 255.
 
-                lr = numpy.zeros((1, data_size, data_size), dtype=float)
-                hr = numpy.zeros((1, label_size, label_size), dtype=float)
+                lr = np.zeros((1, data_size, data_size), dtype=float)
+                hr = np.zeros((1, label_size, label_size), dtype=float)
 
                 lr[0, :, :] = lr_patch
                 hr[0, :, :] = hr_patch[conv_side: -conv_side, conv_side: -conv_side]
@@ -104,14 +104,14 @@ def prepare_all_data(path):
                 data.append(lr)
                 label.append(hr)
 
-    data = numpy.array(data, dtype=float)
-    label = numpy.array(label, dtype=float)
+    data = np.array(data, dtype=float)
+    label = np.array(label, dtype=float)
     return data, label
 
 
 def write_hdf5(data, labels, output_filename):
-    x = data.astype(numpy.float32)
-    y = labels.astype(numpy.float32)
+    x = data.astype(np.float32)
+    y = labels.astype(np.float32)
 
     with h5py.File(output_filename, 'w') as h:
         h.create_dataset('data', data=x, shape=x.shape)
@@ -120,10 +120,10 @@ def write_hdf5(data, labels, output_filename):
 
 def read_training_data(file):
     with h5py.File(file, 'r') as hf:
-        data = numpy.array(hf.get('data'))
-        label = numpy.array(hf.get('label'))
-        train_data = numpy.transpose(data, (0, 2, 3, 1))
-        train_label = numpy.transpose(label, (0, 2, 3, 1))
+        data = np.array(hf.get('data'))
+        label = np.array(hf.get('label'))
+        train_data = np.transpose(data, (0, 2, 3, 1))
+        train_label = np.transpose(label, (0, 2, 3, 1))
         return train_data, train_label
 
 
