@@ -4,8 +4,8 @@ The original paper is [Learning a Deep Convolutional Network for Image Super-Res
 
 ## Result on 81000 iteration
 ### training settings
-- input train data: 1044750 x 1 x 32 x 32 imgs
-- output train data: 1044750 x 1 x 20 x 20 imgs
+- input train data: 1044750 x 32 x 32 x 1 imgs
+- output train data: 1044750 x 20 x 20 x 1 imgs
 - epoches: 10
 - batch_size: 128
 - optimizer: Adam, lr=0.0003
