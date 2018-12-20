@@ -31,7 +31,7 @@ The original paper is [Learning a Deep Convolutional Network for Image Super-Res
     </td>
   </tr>
   <tr>
-    <th>Bicubic</th>
+    <th>Bicubic interpolation</th>
     <td><img src="https://github.com/0leynik/SuperResolutionCNN/blob/master/predict_2x/1_bicubic.jpg" height="250"/>
     <div align="center">514 × 343</div>
     <div align="center">PSNR = 34.36</div>
