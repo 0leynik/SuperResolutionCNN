@@ -2,6 +2,11 @@
 
 The original paper is [Learning a Deep Convolutional Network for Image Super-Resolution](https://arxiv.org/abs/1501.00092)
 
+## Dataset
+[DIV2K High Resolution Images](https://data.vision.ee.ethz.ch/cvl/DIV2K/)
+- [Train Data (HR images)](http://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_train_HR.zip)
+- [Validation Data (HR images)](http://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_valid_HR.zip)
+
 ## Result on 81 000 iteration
 ### training settings
 - input train data: 1 044 750 x 32 x 32 x 1 imgs
