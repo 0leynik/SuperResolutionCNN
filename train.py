@@ -39,7 +39,7 @@ def train():
 
     train_on_batch = True
     if train_on_batch:
-        f = file(os.path.join(loss_save_dir, 'metrics.csv'), 'w')
+        f = open(os.path.join(loss_save_dir, 'metrics.csv'), 'w')
 
         train_ids = np.arange(0, len(data))
 
@@ -81,7 +81,7 @@ def train():
 
         print(history.history.keys())
 
-        f = file(os.path.join(loss_save_dir, 'metrics.csv'), 'w')
+        f = open(os.path.join(loss_save_dir, 'metrics.csv'), 'w')
         loss = history.history['loss']
         val_loss = history.history['val_loss']
         for i in range(len(loss)):
